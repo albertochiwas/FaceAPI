@@ -1,6 +1,6 @@
 
-public class MonsterFace extends FaceGroup {
-
+public class MonsterFace extends FaceGroup
+{
   public MonsterFace(String id) {
     super(id);
     PShape s = createShape(ELLIPSE,40,0,200,200);
@@ -11,8 +11,8 @@ public class MonsterFace extends FaceGroup {
 }
 
 
-public class MonsterEye extends AnimatedFeature {
-   
+public class MonsterEye extends AnimatedFeature
+{
    public MonsterEye(String id, int x, int y) {
      super(id,x,y);
      open();
@@ -35,8 +35,8 @@ public class MonsterEye extends AnimatedFeature {
 }
 
 
-public class MonsterMouth extends AnimatedFeature {
-   
+public class MonsterMouth extends AnimatedFeature
+{  
    public MonsterMouth(String id, int x, int y) {
      super(id,x,y);
      open();
@@ -68,8 +68,8 @@ public class MonsterMouth extends AnimatedFeature {
 }
 
 
-public class AvatarFace {
-
+public class AvatarFace
+{
     MonsterEye ojoIzq;
     MonsterEye ojoDer;
   MonsterMouth boca;
@@ -91,10 +91,6 @@ public class AvatarFace {
     cara.draw();
   }
 
-  //public void rotate(float r) {
-  //    cara.rotate(r);
-  //}
-  
   public BasicState status(FeatureID id) {
     if (id == FeatureID.LeftEye) {
         return ojoIzq.status();
